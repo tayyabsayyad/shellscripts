@@ -5,10 +5,12 @@
 
 
 # Once installation is complete check at IP address 
-# Use screen command to run the server again using following command
+# Use 'screen' command to run the server again using following command
 # cd geonode 
 # screen 
 # docker-compose -f docker-compose.yml -f docker-compose.override.localhost.yml up
+# Use CTRL + A and d to dettach from the server 
+# now you can exit without shutting down the server
 
 cd ~
 
