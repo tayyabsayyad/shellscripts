@@ -1,7 +1,5 @@
 # Geonode Docker Installation Scripts 
 
-# Copy the geonode.sh file to your home directory and run as sh geonode.sh
-
 cd ..
 
 sudo apt-get update
