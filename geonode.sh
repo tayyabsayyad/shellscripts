@@ -26,9 +26,12 @@ sudo chmod +x /usr/local/bin/docker-compose
 
 git clone https://github.com/GeoNode/geonode.git
 
-# In the docker-compose.override.localhost.yml file replace localhost to IP address 
-# Replace following line "ALLOWED_HOSTS=['localhost', ]" to 
-# ALLOWED_HOSTS=['localhost','*'] 
+cd geonode
 
-# docker-compose -f docker-compose.yml -f docker-compose.override.localhost.yml up --build
+echo "Enter Your Public Address"
+read IPADDRESS
+
+sed -i "s/ALLOWED_HOSTS=['localhost', ]/ALLOWED_HOSTS=['*']/g" docker-compose.override.localhost.yml
+
+sed -i "s/localhost/$IPADDRESS/g" docker-compose.override.localhost.yml
 
