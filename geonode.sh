@@ -40,3 +40,6 @@ sed -i "s/ALLOWED_HOSTS=['localhost', ]/ALLOWED_HOSTS=['*']/g" docker-compose.ov
 
 sed -i "s/localhost/$IPADDRESS/g" docker-compose.override.localhost.yml
 
+docker-compose -f docker-compose.yml -f docker-compose.override.localhost.yml up --build
+
+
