@@ -3,6 +3,13 @@
 # sh geonode.sh
 # provide public ip address when asked
 
+
+# Once installation is complete check at IP address 
+# Use screen command to run the server again using following command
+# cd geonode 
+# screen 
+# docker-compose -f docker-compose.yml -f docker-compose.override.localhost.yml up
+
 cd ~
 
 sudo apt-get update
