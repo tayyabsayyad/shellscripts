@@ -1,14 +1,13 @@
-# Geonode Docker Installation Scripts 
+# Geonode Docker Installation Script, to run use following commands 
+# cd shellscripts 
+# sh geonode.sh
+# provide public ip address when asked
 
-# Use CTRL + A and d to detach from the screen if you are working on remote server and screen -r ro reattach to server process
-
-cd ..
+cd ~
 
 sudo apt-get update
 
 sudo apt install -y screen 
-
-screen
 
 sudo apt-get install -y apt-transport-https ca-certificates curl software-properties-common
 
