@@ -2,6 +2,8 @@
 
 # Copy the geonode.sh file to your home directory and run as sh geonode.sh
 
+cd ..
+
 sudo apt-get update
 
 sudo apt-get install -y apt-transport-https ca-certificates curl software-properties-common
