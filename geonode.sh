@@ -1,9 +1,14 @@
 # Geonode Docker Installation Scripts 
 
+# Use CTRL + A and d to detach from the screen if you are working on remote server 
+
 cd ..
 
 sudo apt-get update
 
+sudo apt install -y screen 
+
+screen 
 sudo apt-get install -y apt-transport-https ca-certificates curl software-properties-common
 
 curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
@@ -28,7 +33,7 @@ git clone https://github.com/GeoNode/geonode.git
 
 cd geonode
 
-echo "Enter Your Public Address"
+echo "Enter Your Public Address or enter localhost if your are using on local machine"
 read IPADDRESS
 
 sed -i "s/ALLOWED_HOSTS=['localhost', ]/ALLOWED_HOSTS=['*']/g" docker-compose.override.localhost.yml
